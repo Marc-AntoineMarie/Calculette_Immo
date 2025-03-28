@@ -1,0 +1,370 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Nunito Sans, sans-serif;
+    color: #234B68;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px 70px;
+}
+
+.home {
+    margin: 10px 200px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px  solid #234B68;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+h2 {
+    margin: 30px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    font-weight: bold;
+    height: 240x;
+}
+
+.montant, .taux, .duree {
+    margin: 10px 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    font-size: 14px;
+    height: 22px;
+}
+
+.inputmontant {
+    border: 1px solid#234B68;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+    width: 200px;
+}
+
+.inputtaux {
+    border: 1px solid#234B68;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+    width: 200px;
+}
+
+.inputduree {
+    border: 1px solid#234B68;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+    width: 200px;
+}
+
+/* Pour les navigateurs Webkit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Pour Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.error {
+    border: 1px solid orange;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.montant::after, .taux::after, .duree::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    right: 0px;
+    background-color: #234B68;
+    width: 40px;
+    height: 22px;
+    border-radius: 0px 7px 7px 0px;
+    font-size: 10px;
+}
+
+.montant::after{
+    content: "€";
+    color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.taux::after{
+    content: "%";
+    color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.duree::after{
+    content: "an(s)";
+    color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.message {
+    margin-top: 20px;
+    color: orange;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.calcul {
+    margin: 50px 0px 15px;
+    padding: 10px 60px;
+    background-color: #234B68;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.calcul:hover {
+    background-color: #29517F;
+    cursor: pointer;
+}
+
+/*Debut du tableau*/
+
+.affiche {
+    margin: 30px 200px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px  solid #234B68;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+table {
+    width: 90%;
+    margin-left: 7%;
+}
+
+thead {
+    font-size: 14px;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    font-size: 12px;
+    padding-top: 15px;
+}
+
+.PDF {
+    margin: 25px 0px 0px;
+    width: 240px;
+    padding: 10px 60px;
+    background-color: #234B68;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+
+@media (max-width: 320px){
+    h2 {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .home, .affiche {
+        margin: 10px 20px;
+        padding: 20px;
+    }
+    
+    .montant, .taux, .duree {
+        width: 100%;
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .inputmontant, .inputtaux, .inputduree {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .montant::after, .taux::after, .duree::after {
+        top: 31px;
+        height: 20px;
+    }
+
+    table {
+        width: 100%;
+        display: inline-block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding-right: 15px;
+    }
+}
+
+
+@media (min-width: 321px) and (max-width: 424px){
+    h2 {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .home, .affiche {
+        margin: 10px 20px;
+        padding: 20px;
+    }
+    
+    .montant, .taux, .duree {
+        width: 100%;
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .inputmontant, .inputtaux, .inputduree {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .montant::after, .taux::after, .duree::after {
+        top: 31px;
+        right: 25px;
+        height: 20px;
+    }
+
+    table {
+        width: 100%;
+        display: inline-block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767px){
+    h2 {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .home, .affiche {
+        margin: 10px 20px;
+        padding: 20px;
+    }
+    
+    .montant, .taux, .duree {
+        width: 100%;
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .inputmontant, .inputtaux, .inputduree {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .montant::after, .taux::after, .duree::after {
+        top: 31px;
+        right: 50px;
+        height: 20px;
+    }
+
+    table {
+        width: 100%;
+        display: inline-block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding-right: 15px;
+    }
+}
+/* tableau de calcul */
+#affiche {
+    display: none; /* Cache le tableau par défaut */
+}
+
+/* responsive */
+@media (min-width:768px) and (max-width: 1023px){
+    .home {
+        margin: 30px 70px;
+    }
+    .affiche {
+        margin: 30px 70px;
+    }
+    table {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px){
+    .home {
+        margin: 30px 70px;
+    }
+    .affiche {
+        margin: 30px 70px;
+    }
+}
+
+@media (min-width: 1440px)and (max-width: 2559px){
+    .home {
+        margin: 30px 250px;
+    }
+    .affiche {
+        margin: 30px 250px;
+    }
+}
+
+@media (min-width: 2560px){
+    .home {
+        margin: 30px 650px;
+    }
+    .affiche {
+        margin: 30px 650px;
+    }
+}
+  
+  

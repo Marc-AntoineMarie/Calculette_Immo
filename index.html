@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculette de prêt immobilier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icone_site.png" type="image/png">
+</head>
+
+<body>
+    <div class="image">
+        <img src="images/microlead.png" />
+    </div>
+    <div class="home">
+        <h2>Calculatrice prêt immobiliere</h2>
+        <form>
+            <div class="form">
+                <div class="montant">
+                    <label for="montant">Montant emprunté</label>
+                    <input class="inputmontant" id="montant" type="number" name="montant" placeholder="Valeur entière > ou = 1000">
+                </div>
+                <div class="taux">
+                    <label for="taux">Taux nominal</label>
+                    <input class="inputtaux" id="taux" type="number" name="taux" placeholder="Valeur entre 0.01 et 100">
+                </div>
+                <div class="duree">
+                    <label for="duree">Durée de remboursement</label>
+                    <input class="inputduree" id="duree" type="number" name="duree" placeholder="Valeur entière entre 1 et 100">
+                </div>
+                <div class="message" id="message"></div>
+            </div>
+            <button type="submit" id="calcul" class="calcul">Calculer</button>
+        </form>
+    </div>
+    <div class="affiche" id="affiche">
+        <h2>Tableau d'amortissement</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mois</th>
+                    <th>Solde initial</th>
+                    <th>Échéance</th>
+                    <th>Intérêts</th>
+                    <th>Amortissement</th>
+                    <th>Solde restant</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+        <button type="submit" id="PDF" class="PDF">Télécharger en PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
